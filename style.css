@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-
+    overflow-x: hidden;
     /* colors */
 
     --c1: #222831;
@@ -100,9 +100,11 @@ a{
     justify-content: center;
     z-index: 1;
     overflow: hidden;
+    scroll-behavior: smooth;
+    
     transition: 0.5s;
-    height: 100%;
-    width: 100%;
+    height: 99%;
+    width: 99%;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -125,24 +127,37 @@ a{
     font-family: var(--f2);
 }
 .des h3{
+    font-size: 30px;
+    text-shadow: 2px 3px 20px var(--c4);
     color: var(--c3);
 }
 .des p{
+    font-size: 18px;
     color: var(--c2);
 }
 
 .pro-img img{
-    width: 80px;
+    width: 110px;
     border: 1px solid var(--c3);
     border-radius: 50%;
     overflow: hidden;
     padding: 5px;
 }
-
+.des,.pro-img{
+    transition: 0.5s;
+    animation: all 0.5s ease-in-out;
+}
+.pro-img img:hover {
+    transition: 0.5s linear;
+    background-color:var(--c4);
+    
+}
 .menu-link{
     list-style: none;
     /* background-color: var(--c2); */
     filter:opacity(5px);
+    font-size: 22px;
+    text-transform: uppercase;
     width: 90%;
     border: none;
     border-radius: 10px;
@@ -152,12 +167,45 @@ a{
 }
 
 .menu-link li{
+    width: 100%;
     list-style: none;
-    margin-top: 10px;
+    margin-top: 40px;
+    /* background-color: #001C30; */
+    padding: 10px;
+    border: none;
+    transition: 0.5s step-start;
+}
+.menu-link li:hover{
+    transition: 500ms linear;
+    background-color: #ffffff09;
+}
+.menu-link li a:hover{
+    color: var(--c3);
 }
 .menu-link li a{
+    width: 100%;
     color: var(--wht);
     font-size: larger;
+}
+s
+
+.social-media{
+    width: 50%;
+    /* background-color: #00ADB5; */
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+   
+}
+.social-media img{
+    width: 30px;
+    margin: 10px;
+}
+.footer-menu{
+    margin-top: 10px;
+    color: var(--c2);
+    font-size: 15px;
+    font-family: var(--f3);
 }
 #close-menu img {
     width: 40px;
@@ -172,3 +220,4 @@ a{
     border: none;
     background-color: transparent;
 }
+
