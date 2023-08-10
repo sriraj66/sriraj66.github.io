@@ -49,4 +49,4 @@ function getRandomInt(min, max) {
 
 const randomIndex = getRandomInt(0, combinedQuotes.length - 1);
 
-document.getElementById("quote-field").innerText = combinedQuotes[randomIndex];
+document.getElementById("quote-field").innerText =`❝❝ ${combinedQuotes[randomIndex]} ❞❞`;

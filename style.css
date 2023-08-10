@@ -208,15 +208,15 @@ s
     font-family: var(--f3);
 }
 #close-menu img {
-    width: 40px;
-    background-color: #fff;
+    width: 30px;
+    background-color: var(--wht);
     border-radius: 50%;
 }
 
 #close-menu {
     position: absolute;
-    right: 5%;
-    top: 5%;
+    right: 2.5%;
+    top: 2.5%;
     border: none;
     background-color: transparent;
 }
