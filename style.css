@@ -101,7 +101,8 @@ a{
     z-index: 1;
     overflow: hidden;
     scroll-behavior: smooth;
-    
+    overflow-y: hidden;
+    overflow-x: hidden;
     transition: 0.5s;
     height: 99%;
     width: 99%;
