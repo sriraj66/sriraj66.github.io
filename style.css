@@ -403,6 +403,7 @@ s .social-media {
     margin-top:5px;
     padding: 2px;
     width: 100%;
+    max-width: 500px;
     background: var(--c4);
     height: 20px;
     text-align: center;
@@ -456,6 +457,35 @@ s .social-media {
     .profile-land img {
         width: 400px;
     }
+
+    .Skills h3 {
+        font-size: 20px;
+    }
+    .col,.skill-menu{
+        width: 100%;
+    }
+    .col h4{
+        font-size: 14px;
+    }
+    .skill-menu{
+        padding-bottom: 20px;
+    }
+    .progress{
+        width: 100%;
+        min-width:250px;
+    }
+    .skill-menu{
+        flex-direction: column;
+        
+    }
+    .skill-menu div{
+        width: 100%;
+    }
+    
+    .no-mobile {
+        display: none;
+    }
+
 }
 
 /* MOBILE */
