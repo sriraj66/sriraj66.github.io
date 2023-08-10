@@ -50,3 +50,18 @@ function getRandomInt(min, max) {
 const randomIndex = getRandomInt(0, combinedQuotes.length - 1);
 
 document.getElementById("quote-field").innerText =`❝❝ ${combinedQuotes[randomIndex]} ❞❞`;
+
+
+// scrolling
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    togle_menu.style.display = 'none';
+
+    });
+  });
