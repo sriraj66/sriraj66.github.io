@@ -123,9 +123,9 @@ body {
     position: fixed;
     top: 0;
     width: 99%;
-    background-color: #ffffff;
-    /* Customize the background color */
-    z-index: 1000;
+    margin-left:10px;
+    background-color: var(--c4);
+    z-index: 10;
 }
 
 hr {
@@ -215,6 +215,7 @@ a {
 }
 
 .profile {
+    margin-top:10%;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
