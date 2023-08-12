@@ -65,3 +65,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     });
   });
+
+// drop down - Project
+
+function drop_content(x){
+  var div = document.getElementById(x)
+  if(div.style.display=='none'){
+  div.style.display = 'block'
+  }else{
+  div.style.display = 'none'
+  }
+}
