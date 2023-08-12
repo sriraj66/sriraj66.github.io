@@ -125,7 +125,6 @@ body {
     width: 99%;
     margin-left:10px;
     background-color: var(--c4);
-    z-index: 10;
 }
 
 hr {
@@ -879,5 +878,8 @@ s .social-media {
 
     .footer {
         flex-direction: column;
+    }
+    .licence ,.licence a{
+        font-size:14px;
     }
 }
