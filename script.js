@@ -5,12 +5,13 @@ var togle_menu = document.getElementById("popup-menu");
 
 
 togle_btn.addEventListener("click", function () {
-    console.log("CHANGED");
+    // console.log("CHANGED");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     togle_menu.style.display = 'flex';
 })
 
 close_btn.addEventListener("click", () => {
-    console.log("CHANGED");
+    // console.log("CHANGED");
     togle_menu.style.display = 'none';
 })
 
@@ -76,3 +77,33 @@ function drop_content(x){
   div.style.display = 'none'
   }
 }
+
+// sticky nav
+
+const navigation = document.getElementById('nav');
+const yOffset = navigation.getBoundingClientRect().top + window.scrollY;
+
+function toggleStickyNav() {
+    if (window.pageYOffset >= yOffset) {
+        navigation.classList.add('sticky');
+    } else {
+        navigation.classList.remove('sticky');
+    }
+}
+
+window.addEventListener('scroll', toggleStickyNav);
+
+// back 2 top
+const b2t = document.getElementById('b2t');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 200) {
+      b2t.style.display = 'block';
+    } else {
+      b2t.style.display = 'none';
+    }
+});
+
+b2t.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

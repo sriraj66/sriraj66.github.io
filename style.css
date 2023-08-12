@@ -31,6 +31,7 @@
         width: 90%;
     }
 }
+
 @keyframes fill-bar85 {
     from {
         width: 5%;
@@ -40,6 +41,7 @@
         width: 85%;
     }
 }
+
 @keyframes fill-bar80 {
     from {
         width: 5%;
@@ -92,6 +94,38 @@ body {
     flex-direction: column;
     justify-content: center;
     align-self: center;
+}
+
+.b2t {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    border-radius: 50%;
+    border: 1px solid var(--c2);
+    background-color: var(--c3);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.b2t img {
+    width: 20px;
+    height: auto;
+}
+
+.b2t:hover {
+    background-color: var(--c2);
+    transform: scale(1.1);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    background-color: #ffffff;
+    /* Customize the background color */
+    z-index: 1000;
 }
 
 hr {
@@ -161,7 +195,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 1000;
     overflow: hidden;
     scroll-behavior: smooth;
     overflow-y: hidden;
@@ -302,13 +336,13 @@ s .social-media {
 
 .container-land {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .description-land {
     text-align: start;
-    margin-left: 20px;
+    margin-left: 24px;
     height: max-content;
     width: 100%;
 }
@@ -323,6 +357,28 @@ s .social-media {
     color: var(--c3);
     font-family: var(--f3);
     font-size: 50px;
+}
+
+.description-land a {
+    background-color: var(--c3);
+    color: var(--c4);
+    transition: 0.9s ease;
+    font-family: var(--f3);
+    text-transform: uppercase;
+    border: none;
+    font-size: 24px;
+    padding: 9px;
+    width: 80%;
+    letter-spacing: 8px;
+}
+
+.description-land a:hover {
+    /* transform: scale(1.01); */
+    letter-spacing: 15px;
+
+    background-color: var(--c4);
+    color: var(--c3);
+    border: 1px solid var(--c3);
 }
 
 .profile-land {
@@ -355,9 +411,9 @@ s .social-media {
 }
 
 .About h3,
-.Skills h3 ,
+.Skills h3,
 .Projects h3,
-.Contact h3{
+.Contact h3 {
     font-size: 50px;
     font-family: var(--f3);
     text-transform: uppercase;
@@ -385,6 +441,7 @@ s .social-media {
     align-items: center;
     width: 100%;
 }
+
 .skill-menu .col {
     display: flex;
     flex-direction: column;
@@ -394,14 +451,15 @@ s .social-media {
 }
 
 
-.col h4{
+.col h4 {
     color: var(--c3);
     font-family: var(--f1);
     font-size: 25px;
     text-transform: uppercase;
 }
+
 .progress {
-    margin-top:5px;
+    margin-top: 5px;
     padding: 2px;
     width: 100%;
     max-width: 500px;
@@ -422,35 +480,45 @@ s .social-media {
     vertical-align: baseline;
 }
 
-.lpy,.lweb{
-    animation: fill-bar95 3s forwards ;
+.lpy,
+.lweb {
+    animation: fill-bar95 3s forwards;
 }
-.ljs,.ldb{
-    animation: fill-bar90 3s forwards ;
+
+.ljs,
+.ldb {
+    animation: fill-bar90 3s forwards;
 }
-.ljava,.lc,.lsol{
+
+.ljava,
+.lc,
+.lsol {
     animation: fill-bar85 3s forwards;
 }
-.lcp{
+
+.lcp {
     animation: fill-bar80 3s forwards;
 }
-.lgca{
+
+.lgca {
     animation: fill-bar75 3s forwards;
 }
+
 /* Project */
 
-.Projects{
+.Projects {
     padding: 10px;
     background-color: var(--c4);
 }
 
-.pwrap{
+.pwrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.project{
+
+.project {
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
@@ -460,7 +528,8 @@ s .social-media {
     align-items: center;
     overflow: hidden;
 }
-.project button{
+
+.project button {
     width: 100%;
     height: 40px;
     font-family: var(--f3);
@@ -470,7 +539,7 @@ s .social-media {
     border: none;
     padding: 3px;
     border-bottom: 1px solid var(--c4);
-    background-color:var(--c3);
+    background-color: var(--c3);
     color: white;
     font-size: 18px;
     padding-left: 40px;
@@ -480,15 +549,17 @@ s .social-media {
     margin-bottom: 10px;
     transition: 0.5s;
 }
-.project button img{
+
+.project button img {
     padding: 5px;
     width: 25px;
 }
-.project div{
+
+.project div {
     transition: 0.5s initial;
     display: none;
     width: 100%;
-    
+
     text-align: center;
     font-family: var(--f2);
     font-size: 15px;
@@ -497,17 +568,19 @@ s .social-media {
     animation: fadeIn 0.6s linear;
     margin-bottom: 10px;
 }
-.project div p{
+
+.project div p {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 /* contact */
 
-.Contact{
+.Contact {
     padding: 10px;
 }
-.container-contact{
+
+.container-contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -517,7 +590,8 @@ s .social-media {
     font-family: var(--f3);
     font-size: 18px;
 }
-.container-contact a{
+
+.container-contact a {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -530,47 +604,51 @@ s .social-media {
     color: var(--c4);
     transition: 0.5s ease-in-out;
 }
-.container-contact a:hover{
+
+.container-contact a:hover {
     background-color: var(--c4);
-    filter:blur(0px);
+    filter: blur(0px);
     color: var(--c3);
     text-decoration: var(--c3);
 }
-.container-contact a img{
+
+.container-contact a img {
     height: 80px;
     /* background-color: var(--c4); */
 }
 
-#phone p{
+#phone p {
     filter: blur(3px);
 }
-#phone p:hover{
+
+#phone p:hover {
     filter: blur(0px);
 }
 
 /* footer */
 
-.footer{
+.footer {
     overflow: hidden;
     background-color: var(--c3);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     text-align: center;
     font-family: var(--f1);
     font-size: 15px;
     padding: 10px;
 }
 
-.license{
+.license {
     color: var(--c1);
 }
-.footer .social-media{
+
+.footer .social-media {
     width: 30%;
 }
 
-.license a{
+.license a {
     color: var(--c5);
 }
 
@@ -600,40 +678,47 @@ s .social-media {
     .Skills h3 {
         font-size: 20px;
     }
-    .col,.skill-menu{
+
+    .col,
+    .skill-menu {
         width: 100%;
     }
-    .col h4{
+
+    .col h4 {
         font-size: 14px;
     }
-    .skill-menu{
+
+    .skill-menu {
         padding-bottom: 20px;
     }
-    .progress{
+
+    .progress {
         width: 100%;
-        min-width:250px;
+        min-width: 250px;
     }
-    .skill-menu{
+
+    .skill-menu {
         flex-direction: column;
-        
+
     }
-    .skill-menu div{
+
+    .skill-menu div {
         width: 100%;
     }
-    
+
     .no-mobile {
         display: none;
     }
 
     /* Project */
 
-    .Projects h3{
+    .Projects h3 {
         font-size: 35px;
     }
 
     /* footer */
 
-    .footer{
+    .footer {
         flex-direction: column;
     }
 
@@ -713,71 +798,85 @@ s .social-media {
     }
 
     /* skills */
-    
+
     .Skills h3 {
         font-size: 20px;
     }
-    .col,.skill-menu{
+
+    .col,
+    .skill-menu {
         width: 100%;
     }
-    .col h4{
+
+    .col h4 {
         font-size: 14px;
     }
-    .skill-menu{
+
+    .skill-menu {
         padding-bottom: 20px;
     }
-    .progress{
+
+    .progress {
         width: 100%;
-        min-width:300px;
+        min-width: 300px;
         /* max-width: none; */
     }
-    .skill-menu{
+
+    .skill-menu {
         flex-direction: column;
         width: 100%;
-        
+
     }
-    .skill-menu div{
+
+    .skill-menu div {
         width: 100%;
     }
-    
+
 
     /* Projects */
-    .Projects{
+    .Projects {
         background-color: var(--c5);
     }
-    .Projects h3{
+
+    .Projects h3 {
         font-size: 20px;
     }
-    .project button{
+
+    .project button {
         font-size: 12px;
         height: max-content;
     }
-    .project button img{
+
+    .project button img {
         width: 12px;
     }
-    .project div p{
+
+    .project div p {
         text-align: justify;
     }
+
     /* contact */
-    .Contact h3{
+    .Contact h3 {
         font-size: 30px;
     }
-    
-    .container-contact{
-        
+
+    .container-contact {
+
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
         background-color: transparent;
     }
-    .container-contact a{
+
+    .container-contact a {
         width: 90%;
         background-color: var(--c3);
     }
+
     /* footer */
 
-    .footer{
+    .footer {
         flex-direction: column;
     }
 }
