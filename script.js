@@ -86,6 +86,7 @@ const yOffset = navigation.getBoundingClientRect().top + window.scrollY;
 function toggleStickyNav() {
     if (window.pageYOffset >= yOffset) {
         navigation.classList.add('sticky');
+        togle_menu.style.display = 'none';
     } else {
         navigation.classList.remove('sticky');
     }
