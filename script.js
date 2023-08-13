@@ -6,7 +6,7 @@ var togle_menu = document.getElementById("popup-menu");
 
 togle_btn.addEventListener("click", function () {
     // console.log("CHANGED");
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: -3, behavior: 'smooth' });
     togle_menu.style.display = 'flex';
 })
 
@@ -86,6 +86,7 @@ const yOffset = navigation.getBoundingClientRect().top + window.scrollY;
 function toggleStickyNav() {
     if (window.pageYOffset >= yOffset) {
         navigation.classList.add('sticky');
+        togle_menu.style.display = 'none';
     } else {
         navigation.classList.remove('sticky');
     }
@@ -105,5 +106,5 @@ window.addEventListener('scroll', () => {
 });
 
 b2t.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: -3, behavior: 'smooth' });
 });
