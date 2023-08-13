@@ -200,9 +200,8 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 1000;
     overflow: hidden;
-    /* padding-top: 10%; */
     scroll-behavior: smooth;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -221,7 +220,6 @@ a:hover{
 }
 
 .profile {
-    margin-top:10%;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
