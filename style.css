@@ -125,7 +125,7 @@ body {
     width: 99%;
     background-color: #ffffff;
     /* Customize the background color */
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 
 hr {
@@ -142,6 +142,11 @@ a {
     font-family: var(--f3);
     text-decoration: none;
     color: var(--c3);
+    /* letter-spacing: 5px; */
+    transition: 0.5s ease;
+}
+a:hover{
+    color: var(--c5);
 }
 
 /* QUOTE */
@@ -197,6 +202,7 @@ a {
     justify-content: center;
     z-index: 1000;
     overflow: hidden;
+    /* padding-top: 10%; */
     scroll-behavior: smooth;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -282,9 +288,14 @@ a {
 }
 
 .menu-link li:hover {
-    transition: 500ms linear;
+    transition: 250ms linear;
+    
+    transform: scale(1.2);
+    letter-spacing: 10px;
+    text-decoration: var(--c3);
     background-color: #ffffff09;
 }
+
 
 .menu-link li a:hover {
     color: var(--c3);
@@ -308,8 +319,12 @@ s .social-media {
 .social-media img {
     width: 30px;
     margin: 10px;
+    transition: 0.2s linear;
 }
 
+.social-media img:hover{
+    transform: scale(1.5);
+}
 .footer-menu {
     margin-top: 10px;
     color: var(--c2);
@@ -319,9 +334,15 @@ s .social-media {
 }
 
 #close-menu img {
-    width: 30px;
+    width: 40px;
     background-color: var(--wht);
     border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+#close-menu :hover {
+    background-color: var(--c3);
+    transform: scale(1.1);
 }
 
 #close-menu {
@@ -569,9 +590,16 @@ s .social-media {
     margin-bottom: 10px;
 }
 
+
+
 .project div p {
     padding-left: 15px;
     padding-right: 15px;
+}
+.project button:hover{
+    letter-spacing: 5px;
+    filter:grayscale();
+    transform:scale(1.01);
 }
 
 /* contact */
@@ -878,5 +906,8 @@ s .social-media {
 
     .footer {
         flex-direction: column;
+    }
+    .license{
+        font-size: 13px;
     }
 }
