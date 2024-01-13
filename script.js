@@ -108,3 +108,25 @@ window.addEventListener('scroll', () => {
 b2t.addEventListener('click', () => {
     window.scrollTo({ top: -3, behavior: 'smooth' });
 });
+
+// Full Screen
+document.addEventListener("DOMContentLoaded", function () {
+  const element = document.documentElement;
+
+  // Function to request fullscreen
+  function openFullscreen() {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { // Firefox
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { // IE/Edge
+          element.msRequestFullscreen();
+      }
+  }
+
+  const fullscreenButton = document.getElementById('togle-menu');
+  fullscreenButton.addEventListener('click', openFullscreen);
+  
+});
